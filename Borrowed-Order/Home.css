@@ -1,0 +1,27 @@
+/* src/components/Home.css */
+
+.home-container {
+        padding: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      
+      .problem-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .problem-list li {
+        margin: 10px 0;
+      }
+      
+      .problem-list li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #2196f3;
+      }
+      
+      .problem-list li a:hover {
+        text-decoration: underline;
+      }
+      
