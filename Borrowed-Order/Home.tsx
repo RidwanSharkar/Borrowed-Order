@@ -1,28 +1,53 @@
 // src/Home.tsx
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Home.css';
 
 const Home: React.FC = () => {
   return (
     <div className="home-container">
-      <h1>Algorithm Visualizer</h1>
+      <h2>Problems</h2>
       <ul className="problem-list">
         <li>
-          <Link to="/valid-palindrome">Valid Palindrome</Link>
+          <NavLink 
+            to="/valid-palindrome" 
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Valid Palindrome
+          </NavLink>
         </li>
         <li>
-          <Link to="/valid-parentheses">Valid Parentheses</Link>
+          <NavLink 
+            to="/valid-parentheses" 
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Valid Parentheses
+          </NavLink>
         </li>
         <li>
-          <Link to="/binary-search">Binary Search</Link>
+          <NavLink 
+            to="/binary-search" 
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Binary Search
+          </NavLink>
         </li>
         <li>
-          <Link to="/reverse-linked-list">Reverse Linked List</Link>
+          <NavLink 
+            to="/reverse-linked-list" 
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Reverse Linked List
+          </NavLink>
         </li>
         <li>
-          <Link to="/best-time-to-buy-sell-stock">Best Time to Buy and Sell Stock</Link>
+          <NavLink 
+            to="/best-time-to-buy-sell-stock" 
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Best Time to Buy and Sell Stock
+          </NavLink>
         </li>
       </ul>
     </div>

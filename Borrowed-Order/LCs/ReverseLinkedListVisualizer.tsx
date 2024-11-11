@@ -1,6 +1,6 @@
 // src/components/ReverseLinkedListVisualizer.tsx
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import {
   reverseLinkedList,
   Step,
@@ -8,12 +8,76 @@ import {
 } from '../Algos/reverseLinkedList';
 import './ReverseLinkedListVisualizer.css';
 import { Link } from 'react-router-dom';
+import { CodeContext } from '../CodeContent';
 
+const reverseLinkedListCode = `export function reverseLinkedList(head: ListNode | null): {
+  newHead: ListNode | null;
+  steps: Step[];
+} {
+  let prev: ListNode | null = null;
+  let current = head;
+  const steps: Step[] = [];
+
+  while (current) {
+    const nextNode = current.next;
+
+    steps.push({
+      current: current.val,
+      prev: prev ? prev.val : null,
+      nextNode: nextNode ? nextNode.val : null,
+      list: getListValues(current),
+    });
+
+    current.next = prev;
+    prev = current;
+    current = nextNode;
+  }
+
+  return { newHead: prev, steps };
+}
+
+export function getListValues(head: ListNode | null): number[] {
+  const values: number[] = [];
+  let current = head;
+  while (current) {
+    values.push(current.val);
+    current = current.next;
+  }
+  return values;
+}
+`;
 
 const ReverseLinkedListVisualizer: React.FC = () => {
   const [inputArray, setInputArray] = useState('1,2,3,4,5');
   const [steps, setSteps] = useState<Step[]>([]);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const { setCode, setHighlightedLine } = useContext(CodeContext);
+
+  useEffect(() => {
+    setCode(reverseLinkedListCode);
+  }, [setCode]);
+
+  useEffect(() => {
+    const stepToLineMap: number[] = [
+      1,  // function signature
+      3,  // let prev = null;
+      4,  // let current = head;
+      5,  // const steps: Step[] = [];
+      7,  // while (current) {
+      8,  // const nextNode = current.next;
+      10, // steps.push({...});
+      13, // current.next = prev;
+      14, // prev = current;
+      15, // current = nextNode;
+      18, // return { newHead: prev, steps };
+    ];
+
+    if (currentStepIndex >= 0 && currentStepIndex < stepToLineMap.length) {
+      setHighlightedLine(stepToLineMap[currentStepIndex]);
+    } else {
+      setHighlightedLine(null);
+    }
+  }, [currentStepIndex, setHighlightedLine]);
 
   const handleRun = () => {
     const values = inputArray.split(',').map(Number);
@@ -43,7 +107,7 @@ const ReverseLinkedListVisualizer: React.FC = () => {
           value={inputArray}
           onChange={(e) => setInputArray(e.target.value)}
           placeholder="Enter list values, e.g., 1,2,3,4,5"
-          style={{ width: '300px', padding: '8px' }}
+          style={{ width: '400px', padding: '8px' }}
         />
         <button onClick={handleRun} style={{ marginLeft: '10px', padding: '8px' }}>
           Run

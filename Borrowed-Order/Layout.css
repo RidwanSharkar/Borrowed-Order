@@ -1,0 +1,27 @@
+.layout-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  width: 200px;
+  background-color: #c14848;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+
+.center-panel {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.right-panel {
+  width: 40%;
+  background-color: #c14848;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-left: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+}
