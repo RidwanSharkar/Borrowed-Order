@@ -1,27 +1,40 @@
 .layout-container {
   display: flex;
   height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  min-width: 1024px;
+  background-color: #1a1a1a;
 }
 
 .left-panel {
-  width: 200px;
-  background-color: #c14848;
+  width: 20%;
+  min-width: 200px;
+  background-color: #242424;
   overflow-y: auto;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #333;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .center-panel {
-  flex: 1;
+  width: 40%;
+  min-width: 560px;
   padding: 20px;
   overflow-y: auto;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
 }
 
 .right-panel {
   width: 40%;
-  background-color: #c14848;
+  max-width: 560px;
+  background-color: #242424;
   overflow-y: auto;
   overflow-x: hidden;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #333;
   padding: 20px;
+  padding-right: 30px;
   box-sizing: border-box;
 }

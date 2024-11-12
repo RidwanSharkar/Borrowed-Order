@@ -30,9 +30,16 @@ const Layout: React.FC = () => {
             wrapLines
             lineProps={(lineNumber) => {
               const style: React.CSSProperties = highlightedLine === lineNumber
-                ? { backgroundColor: 'yellow' }
+                ? { backgroundColor: '#2d2d2d' }
                 : {};
               return { style };
+            }}
+            customStyle={{ 
+              width: '100%', 
+              maxWidth: '800px',
+              margin: '0 auto',
+              backgroundColor: '#1a1a1a',
+              color: '#c5c8c6'
             }}
           >
             {code}

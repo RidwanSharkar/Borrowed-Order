@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { validPalindrome, Step } from '../Algos/validPalindrome';
 import './PalindromeVisualizer.css';
-import { Link } from 'react-router-dom';
 import { CodeContext } from '../CodeContent';
 
 const validPalindromeCode = `export function validPalindrome(s: string): {
@@ -97,7 +96,6 @@ const PalindromeVisualizer: React.FC = () => {
 
   return (
     <div className="container">
-      <Link to="/" className="back-button">← Back to Home</Link>
       <h1>Valid Palindrome Visualizer</h1>
       <div className="input-section">
         <input

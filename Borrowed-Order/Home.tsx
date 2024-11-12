@@ -7,7 +7,6 @@ import './Home.css';
 const Home: React.FC = () => {
   return (
     <div className="home-container">
-      <h2>Problems</h2>
       <ul className="problem-list">
         <li>
           <NavLink 
@@ -46,7 +45,7 @@ const Home: React.FC = () => {
             to="/best-time-to-buy-sell-stock" 
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            Best Time to Buy and Sell Stock
+            Best Time to B&S Stock
           </NavLink>
         </li>
       </ul>

@@ -3,11 +3,11 @@
   display: inline-block;
   margin-bottom: 20px;
   text-decoration: none;
-  color: #2196f3;
+  color: #90ee90;
 }
 
 .back-button:hover {
-  text-decoration: underline;
+  opacity: 0.9;
 }
 .container {
         padding: 20px;
@@ -42,17 +42,23 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: lightgray;
-        border: 1px solid #ccc;
+        background-color: #242424;
+        border: 1px solid #333;
+        color: #d4d4d4;
       }
       
       .char-box.active {
-        background-color: #ffeb3b;
-        border: 2px solid #f44336;
+        background-color: #2d2d2d;
+        border: 2px solid #90ee90;
+        color: #90ee90;
       }
       
       .step-info {
         text-align: center;
         margin-bottom: 20px;
+      }
+      
+      h1 {
+        font-size: 2em; /* Adjust the size as needed */
       }
       
