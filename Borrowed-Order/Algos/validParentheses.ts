@@ -2,9 +2,8 @@
 
 export interface Step {
         char: string;
-        action: string;
+        action: 'push' | 'pop';
         stack: string[];
-        index: number;
         isValid: boolean;
       }
       
@@ -21,21 +20,24 @@ export interface Step {
         const steps: Step[] = [];
         let result = true;
       
-        for (let i = 0; i < s.length; i++) {
-          const char = s[i];
+        for (const char of s) {
           if (dict[char]) {
-            const top = stack.pop();
-            const isValid = top === dict[char];
-            steps.push({
-              char,
-              action: 'pop',
-              stack: [...stack],
-              index: i,
-              isValid,
-            });
-            if (!isValid) {
+            if (!stack.length || stack.pop() !== dict[char]) {
+              steps.push({
+                char,
+                action: 'pop',
+                stack: [...stack],
+                isValid: false,
+              });
               result = false;
               break;
+            } else {
+              steps.push({
+                char,
+                action: 'pop',
+                stack: [...stack],
+                isValid: true,
+              });
             }
           } else {
             stack.push(char);
@@ -43,13 +45,16 @@ export interface Step {
               char,
               action: 'push',
               stack: [...stack],
-              index: i,
               isValid: true,
             });
           }
         }
       
-        if (stack.length > 0) result = false;
+        if (result && stack.length === 0) {
+          result = true;
+        } else if (result) {
+          result = false;
+        }
       
         return { result, steps };
       }

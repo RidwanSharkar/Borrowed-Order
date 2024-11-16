@@ -14,7 +14,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<div>Select a problem from the left panel.</div>} />
+          <Route index element={<div></div>} />
           <Route path="valid-palindrome" element={<PalindromeVisualizer />} />
           <Route path="valid-parentheses" element={<ValidParenthesesVisualizer />} />
           <Route path="binary-search" element={<BinarySearchVisualizer />} />

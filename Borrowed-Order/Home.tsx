@@ -7,6 +7,7 @@ import './Home.css';
 const Home: React.FC = () => {
   return (
     <div className="home-container">
+      <img src="/3.svg" alt="App Icon" className="app-icon" />
       <ul className="problem-list">
         <li>
           <NavLink 
@@ -46,6 +47,16 @@ const Home: React.FC = () => {
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
             Best Time to B&S Stock
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/maximum-product-subarray" 
+            className={({ isActive }) => 
+              `medium-difficulty ${isActive ? 'active-link' : ''}`
+            }
+          >
+            Maximum Product Subarray
           </NavLink>
         </li>
       </ul>

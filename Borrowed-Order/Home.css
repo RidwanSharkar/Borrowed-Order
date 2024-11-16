@@ -3,6 +3,24 @@
 .home-container {
         padding: 20px;
         font-family: Arial, sans-serif;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .app-icon {
+        max-width: 215px;      
+        max-height: 215px;     
+        width: auto;           
+        height: auto;          
+        margin-bottom: 20px;
+        filter: drop-shadow(0 0 20px rgba(178, 34, 34, 0.7)); /* Red glow */
+        transition: filter 0.3s ease;
+      }
+      
+      .app-icon:hover {
+        filter: drop-shadow(0 0 15px rgba(178, 34, 34, 0.9));
       }
       
       .problem-list {
@@ -16,7 +34,7 @@
       
       .problem-list li a {
         text-decoration: none;
-        font-size: 18px;
+        font-size: 1rem;
         color: #90ee90;
       }
       
@@ -29,7 +47,17 @@
       
       h2 {
         color: #90ee90;
-        font-size: 1.5em;
+        font-size: 1.2rem;
         margin-bottom: 1em;
+      }
+      
+      .medium-difficulty {
+        color: #ffd700 !important; /* Yellow color medium */
+      }
+      
+      .medium-difficulty:hover,
+      .medium-difficulty.active-link {
+        color: #ffeb3b !important; 
+        opacity: 0.9;
       }
       
