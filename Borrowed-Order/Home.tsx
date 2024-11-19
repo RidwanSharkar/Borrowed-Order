@@ -7,7 +7,7 @@ import './Home.css';
 const Home: React.FC = () => {
   return (
     <div className="home-container">
-      <img src="/3.svg" alt="App Icon" className="app-icon" />
+      <img src="/Borrowed-Order/3.svg" alt="App Icon" className="app-icon" />
       <ul className="problem-list">
         <li>
           <NavLink 
