@@ -15,7 +15,7 @@ import TwoSumIIVisualizer from './LCs/TwoSumIIVisualizer';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/Borrowed-Order">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<div></div>} />
