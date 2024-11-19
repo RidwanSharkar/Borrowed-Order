@@ -117,7 +117,7 @@ const ValidParenthesesVisualizer: React.FC = () => {
 
   return (
     <div className="container">
-      <img src="/1.svg" alt="Problem Icon" className="problem-icon" />
+      <img src="/Borrowed-Order/1.svg" alt="Problem Icon" className="problem-icon" />
       <h1>20 - Valid Parentheses (E)</h1>
       <div className="problem-description">
         <p>

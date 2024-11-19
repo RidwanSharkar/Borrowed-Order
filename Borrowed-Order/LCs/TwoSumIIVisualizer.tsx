@@ -65,7 +65,7 @@ const TwoSumIIVisualizer: React.FC = () => {
 
   return (
     <div className="container">
-      <img src="/2.svg" alt="Problem Icon" className="problem-icon" />
+      <img src="/Borrowed-Order/2.svg" alt="Problem Icon" className="problem-icon" />
       <h1>167 - Two Sum II (E)</h1>
 
       {/* Problem Description Section */}

@@ -72,7 +72,7 @@ const ReverseLinkedListVisualizer: React.FC = () => {
 
   return (
     <div className="container">
-      <img src="/1.svg" alt="Problem Icon" className="problem-icon" />
+      <img src="/Borrowed-Order/1.svg" alt="Problem Icon" className="problem-icon" />
       <h1>206 - Reverse Linked List (E)</h1>
       
       <div className="problem-description">

@@ -31,7 +31,7 @@ const BuySellStockVisualizer: React.FC = () => {
 
   return (
     <div className="container">
-      <img src="/1.svg" alt="Problem Icon" className="problem-icon" />
+      <img src="/Borrowed-Order/1.svg" alt="Problem Icon" className="problem-icon" />
       <h1>121 - Best Time to Buy and Sell Stock (E)</h1>
       
       {/* Problem Description Section */}

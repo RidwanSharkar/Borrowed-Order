@@ -115,7 +115,7 @@ const Layout: React.FC = () => {
       {location.pathname !== '/' && (
         <aside className={`right-panel ${!isRightPanelVisible ? 'hidden' : ''}`} ref={rightPanelRef}>
           <div className="right-panel-header">
-            <img src="/4.svg" alt="Code Icon" className="app-icon" />
+            <img src="/Borrowed-Order/4.svg" alt="Code Icon" className="app-icon" />
             <div className="language-selector">
               <label htmlFor="language-select">Language: </label>
               <select 
