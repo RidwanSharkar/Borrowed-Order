@@ -1,0 +1,250 @@
+.algorithm-visualization {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Controls styling */
+.controls-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform: translateY(20px);
+  animation: slideUp 0.5s ease forwards;
+}
+
+.controls {
+  background: rgba(45, 45, 45, 0.9);
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(144, 238, 144, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.controls button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #90ee90;
+  border: 2px solid #90ee90;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.controls button:hover:not(:disabled) {
+  background-color: #90ee90;
+  color: #1e1e1e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(144, 238, 144, 0.4);
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Step details styling */
+.step-details {
+  background-color: rgba(36, 36, 36, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  color: #d4d4d4;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(20px);
+  animation: slideUp 0.5s ease forwards 0.2s;
+  backdrop-filter: blur(10px);
+}
+
+.detail-box {
+  background: rgba(30, 30, 30, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  border-left: 4px solid #90ee90;
+  transition: transform 0.3s ease;
+}
+
+.detail-box:hover {
+  transform: translateX(10px);
+}
+
+.detail-box p {
+  margin: 8px 0;
+  font-family: 'Consolas', monospace;
+  transition: color 0.3s ease;
+}
+
+.detail-box strong {
+  color: #90ee90;
+  text-shadow: 0 0 10px rgba(144, 238, 144, 0.3);
+}
+
+/* Visualization container */
+.visualization-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  perspective: 1000px;
+}
+
+.anagram-map {
+  background-color: rgba(30, 30, 30, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  color: #d4d4d4;
+  font-family: 'Consolas', monospace;
+  min-width: 200px;
+  transform-style: preserve-3d;
+  animation: cardFlip 0.6s ease forwards;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Result styling */
+.result {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #90ee90;
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(30, 30, 30, 0.9);
+  border-radius: 10px;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: popIn 0.5s ease forwards 0.4s;
+  box-shadow: 0 4px 20px rgba(144, 238, 144, 0.2);
+}
+
+/* Solution selection styling */
+.solution-selection {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(36, 36, 36, 0.9);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  animation: fadeIn 0.5s ease;
+}
+
+.solution-selection label {
+  color: #90ee90;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.solution-selection select {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 2px solid #444;
+  background-color: #242424;
+  color: #d4d4d4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.solution-selection select:hover {
+  border-color: #90ee90;
+  box-shadow: 0 0 10px rgba(144, 238, 144, 0.2);
+}
+
+/* Word animations */
+.word-container {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 15px;
+  background: rgba(144, 238, 144, 0.1);
+  border-radius: 15px;
+  animation: wordPop 0.5s ease forwards;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFlip {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes wordPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .visualization-container {
+    flex-direction: column;
+  }
+  
+  .anagram-map {
+    width: 100%;
+  }
+}
+
+/* Glass morphism effects */
+.glass-effect {
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(144, 238, 144, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+} 

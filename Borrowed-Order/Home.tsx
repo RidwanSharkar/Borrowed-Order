@@ -46,17 +46,47 @@ const Home: React.FC = () => {
             to="/best-time-to-buy-sell-stock" 
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            Best Time to B&S Stock
+            Best Time to Buy & Sell Stock
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to="/maximum-product-subarray" 
+            to="/group-anagrams" 
             className={({ isActive }) => 
               `medium-difficulty ${isActive ? 'active-link' : ''}`
             }
           >
-            Maximum Product Subarray
+            Group Anagrams
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/two-sum-ii" 
+            className={({ isActive }) => 
+              `medium-difficulty ${isActive ? 'active-link' : ''}`
+            }
+          >
+            Two Sum II
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/contains-duplicate" 
+            className={({ isActive }) => 
+              `easy-problem ${isActive ? 'active-link' : ''}`
+            }
+          >
+            Contains Duplicate
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/two-sum" 
+            className={({ isActive }) => 
+              `easy-problem ${isActive ? 'active-link' : ''}`
+            }
+          >
+            Two Sum
           </NavLink>
         </li>
       </ul>

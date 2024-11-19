@@ -45,10 +45,14 @@
         opacity: 0.9;
       }
       
-      h2 {
-        color: #90ee90;
-        font-size: 1.2rem;
-        margin-bottom: 1em;
+      .easy-problem {
+        color: #90ee90 !important; /* Green color for easy problems */
+      }
+      
+      .easy-problem:hover,
+      .easy-problem.active-link {
+        color: #98fb98 !important; 
+        opacity: 0.9;
       }
       
       .medium-difficulty {
@@ -59,5 +63,11 @@
       .medium-difficulty.active-link {
         color: #ffeb3b !important; 
         opacity: 0.9;
+      }
+      
+      h2 {
+        color: #90ee90;
+        font-size: 1.2rem;
+        margin-bottom: 1em;
       }
       

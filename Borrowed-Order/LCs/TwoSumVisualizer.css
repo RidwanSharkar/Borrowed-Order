@@ -1,0 +1,233 @@
+/* Base container styles */
+.container {
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+  
+  /* Problem icon */
+  .problem-icon {
+    max-width: 125px;
+    max-height: 125px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 20px rgba(144, 238, 144, 0.7));
+    transition: filter 0.3s ease;
+  }
+  
+  .problem-icon:hover {
+    filter: drop-shadow(0 0 15px rgba(144, 238, 144, 0.9));
+  }
+  
+  /* Problem description */
+  .problem-description {
+    margin-bottom: 10px;
+    color: #d4d4d4;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .problem-description p {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  /* Examples section */
+  .examples {
+    background-color: #242424;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .example-pair {
+    margin-bottom: 8px;
+  }
+  
+  .example-pair:last-child {
+    margin-bottom: 0;
+  }
+  
+  .example-input, .example-output {
+    margin: 2px 0;
+    padding: 2px 0;
+    font-family: Consolas, monospace;
+    color: #d4d4d4;
+  }
+  
+  .example-output {
+    margin-left: 30px !important;
+  }
+  
+  /* Input section */
+  .input-section {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .input-section input {
+    width: 350px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #242424;
+    color: #d4d4d4;
+    border: 1px solid #333;
+    border-radius: 4px;
+  }
+  
+  .input-section button {
+    padding: 0.5rem 1rem;
+    background-color: #90ee90;
+    color: #242424;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-section button:hover {
+    background-color: #76c776;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+  }
+  
+  .controls button {
+    padding: 6px 12px;
+    background-color: #2d2d2d;
+    color: #90ee90;
+    border: 2px solid #90ee90;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .controls button:hover:not(:disabled) {
+    background-color: #90ee90;
+    color: #2d2d2d;
+  }
+  
+  .controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Visualization container */
+  .visualization-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Step details */
+  .step-details {
+    background-color: #242424;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .detail-box {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  .detail-box p {
+    margin: 4px 0;
+    font-family: 'Consolas', monospace;
+    color: #d4d4d4;
+  }
+  
+  .detail-box strong {
+    color: #90ee90;
+  }
+  
+  /* Array visualization */
+  .array-visualization {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .array-element {
+    width: 50px;
+    height: 50px;
+    background-color: #3c3c3c;
+    border: 2px solid #90ee90;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #d4d4d4;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .array-element.active-left {
+    border-color: #ffd700;
+    animation: pulse 1s infinite;
+  }
+  
+  .array-element.active-right {
+    border-color: #ff4500;
+    animation: pulse 1s infinite;
+  }
+  
+  /* Result display */
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #242424;
+    border-radius: 4px;
+    color: #90ee90;
+    font-family: 'Consolas', monospace;
+    font-size: 1.1rem;
+  }
+  
+  /* Animation keyframes */
+  @keyframes pulse {
+    0% { transform: scale(1); border-color: #90ee90; }
+    50% { transform: scale(1.1); border-color: #ffd700; }
+    100% { transform: scale(1); border-color: #90ee90; }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .problem-icon {
+      max-width: 120px;
+      max-height: 120px;
+    }
+    
+    .input-section input {
+      width: 300px;
+    }
+    
+    .array-element {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
+  } 

@@ -1,0 +1,43 @@
+.set-visualization {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #d4d4d4;
+  font-family: Consolas, monospace;
+}
+
+.found {
+  color: #ffd700;
+  animation: highlight 1s ease-in-out infinite;
+}
+
+.not-found {
+  color: #ff4444;
+}
+
+.step-details h3 {
+  margin-top: 0;
+  color: #90ee90;
+}
+
+.detail-box {
+  background-color: #1e1e1e;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.detail-box p {
+  margin: 8px 0;
+  color: #d4d4d4;
+  font-family: 'Consolas', monospace;
+}
+
+.detail-box strong {
+  color: #90ee90;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #90ee90;
+} 

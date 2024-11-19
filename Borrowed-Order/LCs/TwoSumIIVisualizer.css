@@ -1,0 +1,75 @@
+.algorithm-visualization {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  margin: 0 10px;
+  padding: 6px 12px;
+  background-color: #2d2d2d;
+  color: #90ee90;
+  border: 2px solid #90ee90;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.step-details {
+  background-color: #242424;
+  padding: 15px;
+  border-radius: 4px;
+  color: #d4d4d4;
+  margin-bottom: 20px;
+}
+
+.detail-box p {
+  margin: 5px 0;
+}
+
+.detail-box strong {
+  color: #90ee90;
+}
+
+.visualization-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pointers-visualization {
+  display: flex;
+  gap: 20px;
+}
+
+.pointer {
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  border: 2px solid #444;
+  border-radius: 4px;
+  color: #d4d4d4;
+  font-family: Consolas, monospace;
+}
+
+.pointer.found {
+  border-color: #ffd700;
+  background-color: #2d2d2d;
+  color: #ffd700;
+}
+
+.result {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #90ee90;
+} 
