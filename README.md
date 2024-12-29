@@ -1,6 +1,8 @@
 # Borrowed Order 
 Interactive react app designed to grasp better visual understanding of algorithm implementations. 
 
+---
+
 ![1](https://github.com/user-attachments/assets/ab0f0b53-ef6b-457c-bcaf-ebf525a6fc30)
 
 ---
